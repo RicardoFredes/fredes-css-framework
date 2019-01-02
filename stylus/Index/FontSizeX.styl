@@ -1,0 +1,8 @@
+$FontSizeMobile  = 11, 12, 14, 16, 18, 20, 22, 24, 32, 40, 48
+$FontSizeDesktop = 13, 14, 16, 18, 21, 24, 32, 40, 48, 56, 64
+
+for i in (1..10)
+  $minSize = unit($FontSizeMobile[i - 1], 'px')
+  $maxSize = unit($FontSizeDesktop[i - 1], 'px')
+  .FS{i}x
+    responsiveAttributeInterval(font-size, $minSize, $maxSize)

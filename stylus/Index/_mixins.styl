@@ -1,0 +1,36 @@
+bg($color)
+  background-color $color
+
+color-gradient($colorTop, $colorBottom)
+  background linear-gradient($colorTop, $colorBottom)
+  background-clip text
+  -webkit-text-fill-color transparent
+
+zindex(z)
+  z-index z
+
+w($width)
+  width $width
+
+h($height)
+  height $height
+
+mw($width)
+  min-width $width
+
+mh($height)
+  min-height $height
+
+
+responsiveAttribute($prop, $valueSreenPhone = inherit, $valueScreenTablet = inherit, $valueScreenNote = inherit, $valueScreenDesktop = inherit, $valueSreenHD = inherit)
+  add-property($prop, $valueSreenPhone)
+  +above('sm')
+    add-property($prop, $valueScreenTablet)
+  +above('md')
+    add-property($prop, $valueScreenDesktop)
+  +above('lg')
+    add-property($prop, $valueSreenHD)
+
+responsiveAttributeInterval($prop, $minSize, $maxSize)
+  $interval = ($maxSize - $minSize)/4
+  responsiveAttribute($prop, round($minSize), round($minSize + $interval), round($minSize + ($interval * 2)), round($minSize + ($interval * 3)), round($maxSize))
