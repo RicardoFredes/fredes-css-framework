@@ -1,0 +1,10 @@
+.Grid
+  display grid
+  grid-column-gap 16px
+  grid-row-gap 16px
+  &.GridThreeColumns
+    grid-template-columns repeat(1,1fr)
+    +above('sm')
+      grid-template-columns repeat(2,1fr)
+    +above('md')
+      grid-template-columns repeat(3,1fr)

@@ -4,9 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "node server.js"
   },
   "author": "Fredes",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "css-minifiers": "^3.0.0",
+    "rupture": "^0.7.1",
+    "stylus": "^0.54.5"
+  }
 }

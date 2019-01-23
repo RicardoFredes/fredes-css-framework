@@ -6,8 +6,12 @@ color-gradient($colorTop, $colorBottom)
   background-clip text
   -webkit-text-fill-color transparent
 
-zindex(z)
-  z-index z
+zindex($z)
+  z-index $z
+  
+radius($number = 4)
+  $radius = unit($number, 'px')
+  border-radius $radius
 
 w($width)
   width $width
@@ -20,7 +24,10 @@ mw($width)
 
 mh($height)
   min-height $height
-
+  
+transitionAll($seconds = .3)
+  $time = unit($seconds, 's')
+  transition all ease $time
 
 responsiveAttribute($prop, $valueSreenPhone = inherit, $valueScreenTablet = inherit, $valueScreenNote = inherit, $valueScreenDesktop = inherit, $valueSreenHD = inherit)
   add-property($prop, $valueSreenPhone)

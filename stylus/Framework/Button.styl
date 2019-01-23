@@ -1,0 +1,38 @@
+.Btn, a.Btn, button.Btn
+  padding 12px 16px
+  cursor pointer
+  letter-spacing .05em
+  radius()
+  display inline-block
+  text-decoration none
+  color $color_primary
+  transtionAll()
+  font-size 14px
+  border none
+  text-transform uppercase
+  font-weight bold
+  i
+    position relative
+    top 4px
+    line-height 24px
+  &:hover
+    filter brightness(.8)
+  &.BtnPrimary
+    color white
+    bg($color_primary)
+  &.BtnSecondary
+    color white
+    bg($color_secondary)
+  &.BtnSecondaryInvert
+    color $color_secondary
+    bg(white)
+  &.BtnOutline
+    bg(transparent)
+    color white
+    border 1px solid
+    &.BtnOutlinePrimary
+      color $color_primary
+      border 2px solid
+    &.BtnOutlineSecondary
+      color $color_secondary
+      border 2px solid

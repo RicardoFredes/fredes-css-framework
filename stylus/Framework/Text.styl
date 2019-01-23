@@ -8,17 +8,26 @@
   text-transform uppercase
 .Underline
   text-decoration underline
+.DecorationNone
+  text-decoration none
 .Strong
   font-weight bold
+.SStrong
+  font-weight bolder
 .Light
   font-weight lighter
 .NoWrap
   white-space nowrap
 
-.AboveTextCenter
-  +above('sm')
-  	text-align-center
+.SingleSpace
+  line-height 1.5em
+.DoubleSpace
+  line-height 2em
 
-.BellowTextCenter
-  +below('sm')
-  	text-align-center
+.TextCenterAbove
+  +above('xs')
+  	text-align center
+
+.TextCenterBelow
+  +below('xs')
+  	text-align center

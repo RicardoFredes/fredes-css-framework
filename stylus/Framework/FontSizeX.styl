@@ -5,4 +5,4 @@ for i in (1..10)
   $minSize = unit($FontSizeMobile[i - 1], 'px')
   $maxSize = unit($FontSizeDesktop[i - 1], 'px')
   .FS{i}x
-    responsiveAttributeInterval(font-size, $minSize, $maxSize)
+    responsiveAttributeInterval('font-size', $minSize, $maxSize)
